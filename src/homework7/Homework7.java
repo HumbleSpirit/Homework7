@@ -174,7 +174,7 @@ public class Homework7 {
                     compareCounter++;
                 }
             }
-        System.out.println("User entered number " + userInput1 + " had been appeared in array of "+ f +" elements " + compareCounter + " times");*/
+        System.out.println("User entered number " + userInput1 + " had been appeared in array of "+ f +" elements " + compareCounter + " times");
         
         
         System.out.println("Task 7");
@@ -238,7 +238,37 @@ public class Homework7 {
             }
         System.out.println("3a; " + aliquotTo_3a);
         System.out.println("5a; " + aliquotTo_5a);
-        System.out.println("7a; " + aliquotTo_7a);
+        System.out.println("7a; " + aliquotTo_7a);*/
+        
+        
+        
+        System.out.println("Task 8");
+        System.out.println("Create array of 10 random elements from 0 to 100. Count numbers, which aliquot to 3 but not to 5");
+        int h = 10;
+        int arrayH[] = new int[h];
+        int aliquotTo_3 = 0;
+        int not_AliquotTo_5 = 0;
+        
+        for (int i = 0; i < arrayH.length; i++)
+            {
+                 arrayH[i] = (int)(Math.random() * 101);
+            }
+        for (int i = 0; i < arrayH.length; i++)
+            {
+                 if (arrayH[i] % 3 == 0)
+                    {
+                        aliquotTo_3 += arrayH[i];
+                    }
+                 else if (arrayH[i] % 5 != 0)
+                    {
+                        not_AliquotTo_5 += arrayH[i];
+                    }
+                 
+            }
+        System.out.println("3; " + aliquotTo_3);
+        System.out.println("not 5; " + not_AliquotTo_5);
     }
+    
+    
     
 }
