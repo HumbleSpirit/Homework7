@@ -238,7 +238,7 @@ public class Homework7 {
             }
         System.out.println("3a; " + aliquotTo_3a);
         System.out.println("5a; " + aliquotTo_5a);
-        System.out.println("7a; " + aliquotTo_7a);*/
+        System.out.println("7a; " + aliquotTo_7a);
         
         
         
@@ -267,6 +267,63 @@ public class Homework7 {
             }
         System.out.println("3; " + aliquotTo_3);
         System.out.println("not 5; " + not_AliquotTo_5);
+        
+        
+        System.out.println("Task 9");
+        System.out.println("Create array of 20 elements from -10 to 30. Count summ of elements before first negative element");
+        
+        int j = 20;
+        int minRangeJ = -10;
+        int maxRangeJ = 30;
+        int summOfvaluesBeforeNegative = 0;
+        
+        int arrayJ[] = new int[j];
+        for (int i = 0; i < arrayJ.length; i++)
+            {
+                 arrayJ[i] = (int)(Math.random() * (maxRangeJ - minRangeJ + 1) + minRangeJ);
+                 //System.out.println(arrayJ[i]);
+            }
+        System.out.println("---");
+
+            for (int i = 0; i < arrayJ.length; i++)
+                {
+                    System.out.println(arrayJ[i]);
+                         if (arrayJ[i] < 0)
+                            {
+                               break;    
+                            }
+                         summOfvaluesBeforeNegative += arrayJ[i];
+                }
+            System.out.println("Summ of elements before negative values is " + summOfvaluesBeforeNegative);*/
+        
+        System.out.println("Task 10");
+        System.out.println("Create array of 20 elements from -10 to 30. Count summ of elements before first positive element");
+        
+        int k = 20;
+        int minRangeK = -30;
+        int maxRangeK = 10;
+        int summOfvaluesBeforePositive = 0;
+        
+        int arrayK[] = new int[k];
+        for (int i = 0; i < arrayK.length; i++)
+            {
+                 arrayK[i] = (int)(Math.random() * (maxRangeK - minRangeK + 1) + minRangeK);
+                 System.out.println(arrayK[i]);
+            }
+        System.out.println("---");
+
+            for (int i = 0; i < arrayK.length; i++)
+                {
+                    System.out.println(arrayK[i]);
+                         if (arrayK[i] > 0)
+                            {
+                               break;    
+                            }
+                         summOfvaluesBeforePositive += arrayK[i];
+                }
+            System.out.println("Summ of elements before negative values is " + summOfvaluesBeforePositive);
+        
+            
     }
     
     
