@@ -20,7 +20,7 @@ public class Homework7 {
     {
         Scanner in = new Scanner(System.in);
         
-        /*System.out.println("Task 1");
+        System.out.println("Task 1");
         System.out.println("Enter array of 5 elements and print it in reverse order");
         int a = 5;
         int array[] = new int[a];
@@ -246,7 +246,7 @@ public class Homework7 {
         System.out.println("Create array of 10 random elements from 0 to 100. Count numbers, which aliquot to 3 but not to 5");
         int h = 10;
         int arrayH[] = new int[h];
-        int aliquotTo_3 = 0;
+        aliquotTo_3 = 0;
         int not_AliquotTo_5 = 0;
         
         for (int i = 0; i < arrayH.length; i++)
@@ -270,31 +270,35 @@ public class Homework7 {
         
         
         System.out.println("Task 9");
-        System.out.println("Create array of 20 elements from -10 to 30. Count summ of elements before first negative element");
+        System.out.println("Create array of 20 elements from -10 to 30. Count summ of elements after first negative element");
         
         int j = 20;
         int minRangeJ = -10;
         int maxRangeJ = 30;
-        int summOfvaluesBeforeNegative = 0;
+        int summOfvaluesAfterNegative = 0;
+        boolean firstNegativeElement = false;
         
         int arrayJ[] = new int[j];
         for (int i = 0; i < arrayJ.length; i++)
             {
                  arrayJ[i] = (int)(Math.random() * (maxRangeJ - minRangeJ + 1) + minRangeJ);
-                 //System.out.println(arrayJ[i]);
+                 System.out.println(arrayJ[i]);
             }
         System.out.println("---");
 
             for (int i = 0; i < arrayJ.length; i++)
                 {
-                    System.out.println(arrayJ[i]);
-                         if (arrayJ[i] < 0)
-                            {
-                               break;    
-                            }
-                         summOfvaluesBeforeNegative += arrayJ[i];
+                    if (!firstNegativeElement && arrayJ[i] < 0)
+                    {
+                        firstNegativeElement = true;
+                        continue;
+                    }
+                    if (firstNegativeElement)
+                    {
+                        summOfvaluesAfterNegative += arrayJ[i];
+                    }
                 }
-            System.out.println("Summ of elements before negative values is " + summOfvaluesBeforeNegative);*/
+            System.out.println("Summ of elements after negative values is " + summOfvaluesAfterNegative);
         
         System.out.println("Task 10");
         System.out.println("Create array of 20 elements from -10 to 30. Count summ of elements before first positive element");
@@ -321,11 +325,6 @@ public class Homework7 {
                             }
                          summOfvaluesBeforePositive += arrayK[i];
                 }
-            System.out.println("Summ of elements before negative values is " + summOfvaluesBeforePositive);
-        
-            
+            System.out.println("Summ of elements before positive value is " + summOfvaluesBeforePositive);
     }
-    
-    
-    
 }
